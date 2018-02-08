@@ -20,7 +20,7 @@ namespace MVC
             );
 
             routes.MapRoute(
-                name: "Hello",
+                name: "Store",
                 url: "{controller}/{action}/{name}/{id}"
             );
         }

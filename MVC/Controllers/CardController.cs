@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PokemonTcgSdk;
 
 namespace MVC.Controllers
 {
@@ -35,6 +36,14 @@ namespace MVC.Controllers
             ViewBag.NumTimes = numTimes;
 
             return View();
+        }
+
+
+        public string ById(string id)
+        {
+            var card = Card.Find<Pokemon>("base4-4");
+            var textVersion = card.Card.Name;
+            return textVersion;
         }
     }
 }
